@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:padding="30dp">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ID"
+        android:gravity="top|left"
+        android:layout_above="@+id/PW"
+        android:hint="@string/Id"
+        android:lineSpacingExtra="2sp"/>
+
+    <EditText
+        android:id="@+id/PW"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="2sp"
+        android:hint="@string/Pw"
+        android:layout_above="@+id/LogBtn"/>
+
+    <Button
+        android:id="@+id/LogBtn"
+        android:background="#33FF33"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textColor="#ffffff"
+        android:typeface="sans"
+        android:text="@string/logbtn"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/SUBtn"
+        android:text="@string/SignUp"
+        android:layout_below="@+id/LogBtn"
+        android:layout_alignRight="@+id/LogBtn" />
+
+</RelativeLayout>
