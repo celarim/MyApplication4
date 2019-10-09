@@ -15,6 +15,8 @@
         android:gravity="top|left"
         android:layout_above="@+id/PW"
         android:hint="@string/Id"
+        android:autofillHints="@string/Id"
+        android:singleLine="true"
         android:lineSpacingExtra="2sp"/>
 
     <EditText
@@ -23,7 +25,9 @@
         android:layout_height="wrap_content"
         android:lineSpacingExtra="2sp"
         android:hint="@string/Pw"
-        android:layout_above="@+id/LogBtn"/>
+        android:singleLine="true"
+        android:autofillHints="@string/Pw"
+        android:layout_above="@+id/LogBtn" />
 
     <Button
         android:id="@+id/LogBtn"
@@ -41,6 +45,6 @@
         android:id="@+id/SUBtn"
         android:text="@string/SignUp"
         android:layout_below="@+id/LogBtn"
-        android:layout_alignRight="@+id/LogBtn" />
+        android:layout_alignEnd="@+id/LogBtn" />
 
 </RelativeLayout>
