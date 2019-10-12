@@ -17,6 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".SignUpActivity" android:label="SU 액티비티"/>
+        <activity android:name=".WorkActivity" android:label="WK 액티비티"/>
     </application>
 
 </manifest>

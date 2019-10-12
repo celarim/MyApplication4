@@ -46,5 +46,10 @@
         android:text="@string/SignUp"
         android:layout_below="@+id/LogBtn"
         android:layout_alignEnd="@+id/LogBtn" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/TV"
+        android:layout_below="@+id/SUBtn"/>
 
 </RelativeLayout>

@@ -6,6 +6,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.*;
+
 public class SignUpActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -13,7 +17,7 @@ public class SignUpActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.signup);
         Button mksu = (Button) findViewById(R.id.MKSU);
-        EditText mkid, mkpw, name, phone, address;
+        final EditText mkid, mkpw, name, phone, address;
         mkid = (EditText) findViewById(R.id.MKID);
         mkpw = (EditText) findViewById(R.id.MKPW);
         name = (EditText)findViewById(R.id.Name);
@@ -23,13 +27,43 @@ public class SignUpActivity extends Activity {
         mksu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                File file = new File(getFilesDir()+"/"+mkid.getText().toString()+".txt") ;
+                System.out.println(getFilesDir()+"/"+mkid.getText().toString()+".txt");
+                FileWriter fw = null ;
+                BufferedWriter bufwr = null;
+
+                try {
+                    // open file.
+                    fw = new FileWriter(file) ;
+                    bufwr = new BufferedWriter(fw);
+
+                    // write file.
+                    bufwr.write(mkpw.getText().toString() + "\n");
+                    bufwr.write(name.getText().toString());
+                    bufwr.write(phone.getText().toString());
+                    bufwr.write(address.getText().toString());
+
+                    bufwr.close();
+                    fw.close();
+
+                    finish();
+
+                } catch (Exception e) {
+                    e.printStackTrace() ;
+                }
+
+                // close file.
+                if (fw != null) {
+                    // catch Exception here or throw.
+                    try {
+                        fw.close() ;
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+
 
             }
         });
-
-
-
-
-
     }
 }
