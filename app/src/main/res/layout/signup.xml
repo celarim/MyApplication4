@@ -16,6 +16,11 @@
             android:layout_height="wrap_content"
             android:singleLine="true"
             android:id="@+id/MKID"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/check"
+            android:text="중복확인"/>
 
     </LinearLayout>
 
@@ -91,14 +96,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:id="@+id/rg"
         android:layout_gravity="right">
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/acp"
             android:text="@string/YGagree" />
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/disacp"
             android:text="@string/YGDisagree" />
     </RadioGroup>
      <Button
