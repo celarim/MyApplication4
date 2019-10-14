@@ -1,6 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
+    android:padding="30dp"
     android:layout_height="match_parent">
+    <TextView
+        android:layout_column="0"
+        android:id="@+id/T1"
+        android:text="음악 재생"/>
+    <Switch
+        android:layout_row="0"
+        android:layout_column="1"
+        android:id="@+id/PL"
+        android:checked="false" />
+    <RadioGroup
+        android:id="@+id/rgmusic"
+        android:layout_row="1"
+        android:layout_column="0">
 
-</LinearLayout>
+        <RadioButton
+            android:id="@+id/FW"
+            android:checked="true"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="꽃의 왈츠"/>
+        <RadioButton
+            android:id="@+id/GI"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="행진곡"/>
+
+    </RadioGroup>
+    <ImageView
+        android:layout_column="1"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:id="@+id/image1"
+        android:src="@drawable/flow"/>
+    <ImageView
+        android:layout_column="1"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:id="@+id/image2"
+        android:src="@drawable/soldier"
+        android:visibility="invisible"/>
+
+</GridLayout>
